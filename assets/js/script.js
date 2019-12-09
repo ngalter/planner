@@ -21,6 +21,7 @@
             {
                 currentHour = newHour;
                 console.log(currentHour);
+                checkHour();
             };
         },1000);   
     }
