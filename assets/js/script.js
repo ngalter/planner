@@ -21,7 +21,7 @@
             {
                 currentHour = newHour;
                 console.log(currentHour);
-                checkHour();
+                checkHours();
             };
         },1000);   
     }
@@ -57,3 +57,8 @@
                 $(myId).prevAll("textarea").removeClass( "present future");
     }
 });
+
+function storeData()
+{
+
+}
