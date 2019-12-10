@@ -4,13 +4,12 @@ $( document ).ready(function() {
     var newHour = currentHour;
     var d = moment().format("dddd, MMMM Do, YYYY");
     var myHour = ["9am","10am","11am","Noon","1pm","2pm","3pm","4pm","5pm"];
-    var hours = ["09","10","11","12","13","14","15","16","17"];
-    startTimer();
-    createCalendar(); 
-    checkHours();
-
-
-
+    
+    function indexHour(x)
+    {
+        var indexHour = ["09","10","11","12","13","14","15","16","17"];
+        return indexHour[x];
+    }
     function startTimer()
     {
         
@@ -30,13 +29,12 @@ $( document ).ready(function() {
 
     function createCalendar()
     {
-        var $timeBlock = $("#timeBlock");
+
         $.each(myHour, function (i, value) 
         {
             console.log(value); 
-            var strI = i.toString();
             var calHour = $("<p>").text(value).addClass("hour");
-            var calInput = $("<textarea rows='2'>").addClass ("past time-block data").attr("id",hours[i]);
+            var calInput = $("<textarea rows='2'>").addClass ("future time-block data").attr("id",indexHour(i));
             var calBtn = $("<button>").html("<i class=\"fas fa-download\"></i>").addClass("saveBtn");
             $("#timeBlock").append(calHour,calInput,calBtn);
         });
@@ -57,18 +55,15 @@ $( document ).ready(function() {
                 $(myId).prevAll("textarea").removeClass( "present future");
     }
 
-    $("button").on("click", function(){
-        alert("The paragraph was clicked.");
 
-        var storeDate = d;
-        var storeInput = []; 
-       
-        $("data").each(hours, function(i,value)
-        {
-            var storeInput = document.getElementById(value).innerHTML;
-            console.log(document.getElementById(value).innerHTML);
-            console.log(value);
-        });
-    });
+    
+    //    $.each("textara", function (i, value) {
+      //    var hourText = [];
+        //  hourText[i]= $("textarea").html;
+   //       console.log($("textarea").html);
+     //   });
 
+    startTimer();
+    createCalendar(); 
+    checkHours();
 });

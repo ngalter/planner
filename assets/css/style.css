@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  margin-bottom: 30px;
 }
 
 .data {
@@ -76,9 +77,9 @@ textarea{
 
 }
 
-.saveBtn i:hover {
+/*.saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
   padding: 1.2em 0em 1.2em 0em;
   width: 10%;
-}
+}*/
