@@ -36,9 +36,13 @@ $( document ).ready(function() {
             var calHour = $("<p>").text(value).addClass("hour");
             var calInput = $("<textarea rows='2'>").addClass ("future time-block data").attr("id",indexHour(i));
             var calBtn = $("<button>").html("<i class=\"fas fa-download\"></i>").addClass("saveBtn");
-            $("#timeBlock").append(calHour,calInput,calBtn);
+            $("#timeBlock").append(calHour, calInput, calBtn);
         });
+        $("button").click(function(){
+            alert("The button was clicked.");
+          });
     }
+
 
 
     function checkHours()
