@@ -36,7 +36,7 @@ $( document ).ready(function() {
             console.log(value); 
             var strI = i.toString();
             var calHour = $("<p>").text(value).addClass("hour");
-            var calInput = $("<textarea rows='2'>").addClass ("past time-block").attr("id",hours[i]);
+            var calInput = $("<textarea rows='2'>").addClass ("past time-block data").attr("id",hours[i]);
             var calBtn = $("<button>").html("<i class=\"fas fa-download\"></i>").addClass("saveBtn");
             $("#timeBlock").append(calHour,calInput,calBtn);
         });
@@ -62,11 +62,12 @@ $( document ).ready(function() {
 
         var storeDate = d;
         var storeInput = []; 
-
-        $.each(hours, function(i,value)
+       
+        $("data").each(hours, function(i,value)
         {
-            var storeInput = document.getElementById(value).innerHTML
-            console.log(storeInput);
+            var storeInput = document.getElementById(value).innerHTML;
+            console.log(document.getElementById(value).innerHTML);
+            console.log(value);
         });
     });
 

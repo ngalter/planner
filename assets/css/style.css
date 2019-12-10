@@ -4,6 +4,10 @@ body {
   line-height: 1;
 }
 
+.data {
+  background: transparent;
+}
+
 textarea{
   background: transparent;
   resize: none;
