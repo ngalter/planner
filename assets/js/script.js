@@ -32,12 +32,12 @@ $(document).ready(function () {
             var myHr = indexHour(i);
             var myId = "#" + myHr;
             if (parseInt(currentHour) >= 18 && parseInt(currentHour) <= 24) {
-                var calInput = $("<textarea rows='2'>").addClass("past time-block data").attr("id", myHr);
+                var calInput = $("<textarea rows='3'>").addClass("past time-block data").attr("id", myHr);
             }
             else {
-                var calInput = $("<textarea rows='2'>").addClass("future time-block data").attr("id", myHr);
+                var calInput = $("<textarea rows='3'>").addClass("future time-block data").attr("id", myHr);
             }
-            var calBtn = $("<button>").html("<i class=\"far xl fa-share-square\"></i>").addClass("saveBtn");
+            var calBtn = $("<button>").html("<i class=\"far fa-share-square\"></i>").addClass("saveBtn");
             $("#timeBlock").append(calHour, calInput, calBtn);
         });
         $("button").click(function () {
