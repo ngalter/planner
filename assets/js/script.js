@@ -32,7 +32,7 @@ $(document).ready(function () {
             var myHr = indexHour(i);
             var myId = "#" + myHr;
             if (parseInt(currentHour) >= 18 && parseInt(currentHour) <= 24) {
-                var calInput = $("<textarea rows='3'>").addClass("past time-block data").attr("id", myHr);
+                var calInput = $("<textarea rows='3'>").addClass("past time-block").attr("id", myHr);
             }
             else {
                 var calInput = $("<textarea rows='3'>").addClass("future time-block data").attr("id", myHr);
