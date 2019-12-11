@@ -87,4 +87,14 @@ textarea{
   padding-left: .6em ;
 
 }
-
+@media only screen and (max-width: 700px) {
+  .time-block{
+    width: 72.5%;
+  }
+  .hour{
+    width: 13%;
+  }
+  .saveBtn{
+    width: 13%;
+  }
+}
