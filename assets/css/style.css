@@ -71,15 +71,14 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-  padding: 1em .8em;
+  padding: 1em .8em 1em .8em;
   width: 8%;
   float: right;
 
 }
 
-/*.saveBtn i:hover {
-  font-size: 20px;
+.saveBtn i:hover {
   transition: all .3s ease-in-out;
-  padding: 1.2em 0em 1.2em 0em;
-  width: 10%;
-}*/
+  padding-left: .9em ;
+
+}
