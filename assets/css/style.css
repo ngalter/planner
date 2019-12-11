@@ -37,7 +37,7 @@ textarea{
   border-radius: 15px;
   margin-left: .2em;
   margin-right: 0em;
-  width: 87.3%;
+  width: 85.3%;
 }
 
 .row {
@@ -53,7 +53,7 @@ textarea{
   margin-bottom: 0em;
   background-color: #44484d;
   color: #ffffff;
-  width: 6%;
+  width: 7%;
   margin-right: 0em;
   margin-left: 0em;
   padding: 1.5em .2em 1.5em .2em;
@@ -82,7 +82,7 @@ textarea{
   margin-bottom: 0em;
   background-color:#44484d;
   color: #ffffff;
-  width: 6%;
+  width: 7%;
   padding: 1.5em .6em 1.5em .6em;
   float: right;
 }
@@ -92,22 +92,22 @@ textarea{
   padding-left: .6em ;
 
 }
-@media only screen and (max-width: 650px)
+@media only screen and (max-width: 700px)
 {
   .container {
-    max-width: 450px;
+    max-width: 500px;
   }
   .saveBtn{
-    width: 12%;
+    width: 14%;
     padding-right: 1em;
     padding-left: .8em;
   }
   .hour {
-    width: 12%;
+    width: 14%;
     padding-right: 1.7em;
     padding-left: .3em;
   }
   .time-block {
-    width: 75%;
+    width: 70%;
   }
 }
