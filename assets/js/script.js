@@ -37,7 +37,7 @@ $(document).ready(function () {
             else {
                 var calInput = $("<textarea rows='2'>").addClass("future time-block data").attr("id", myHr);
             }
-            var calBtn = $("<button>").html("<i class=\"far fa-share-square\"></i>").addClass("saveBtn");
+            var calBtn = $("<button>").html("<i class=\"far xl fa-share-square\"></i>").addClass("saveBtn");
             $("#timeBlock").append(calHour, calInput, calBtn);
         });
         $("button").click(function () {

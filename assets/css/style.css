@@ -19,11 +19,24 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  background-image: url("../img/office.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 350px;
+  padding-top: 260px;
+  padding-bottom: 10px;
+  /*background-color: transparent;*/
+  color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
+
+/*.jumbotron{
+  background-image: url("./assets/img/mcttpic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 500px;
+ }*/
 
 .description{
   white-space: pre-wrap;
@@ -70,15 +83,16 @@ textarea{
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
+  font-size: 1.2em;
+
   color: white;
-  padding: 1em .8em 1em .8em;
+  padding: .8em .4em .8em .4em;
   width: 8%;
   float: right;
-
 }
 
 .saveBtn i:hover {
   transition: all .3s ease-in-out;
-  padding-left: .9em ;
+  padding-left: .5em ;
 
 }
