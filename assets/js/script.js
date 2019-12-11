@@ -1,7 +1,7 @@
 // A $( document ).ready() block.
 $(document).ready(function () {
     var currentHour = moment().format("HH");
-    var dateKey = moment().format("MMDDYY");
+    var today = moment().format("MMDDYY");
     var newHour = currentHour;
     var calendarDate = moment().format("dddd, MMMM Do, YYYY");
     var myHour = ["9am", "10am", "11am", "Noon", "1pm", "2pm", "3pm", "4pm", "5pm"];
@@ -52,7 +52,7 @@ $(document).ready(function () {
             for (var i = 0; i < 9; i++)
             {
                 userInput = document.getElementById(indexHour(i)).value;
-                localStorage.setItem(indexHour(i), userInput);
+                localStorage.setItem(today+indexHour(i), userInput);
             }
           } else {
             // Sorry! No Web Storage support..
@@ -67,9 +67,9 @@ $(document).ready(function () {
             
             for (var i = 0; i < 9; i++)
             {
-                dateKey = indexHour(i);
+                dateKey = today + indexHour(i);
                 userInput = localStorage.getItem(dateKey);
-                document.getElementById(dateKey).value = userInput;
+                document.getElementById(indexHour(i)).value = userInput;
             }
           } else {
             // Sorry! No Web Storage support..
