@@ -2,26 +2,42 @@
 $(document).ready(function () {
     var currentHour = moment().format("HH");
     var today = moment().format("MMDDYY");
+    var currentDay = today.slice(2,4);
+    console.log(currentDay);
     var newHour = currentHour;
-    var calendarDate = moment().format("dddd, MMMM Do, YYYY");
+    var calendarDate = moment().format("dddd, MMMM Do, YYYY");    
     var myHour = ["9am", "10am", "11am", "Noon", "1pm", "2pm", "3pm", "4pm", "5pm"];
-  
+
     function indexHour(x) {
         var indexHour = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
         return indexHour[x];
     }
+
     function startTimer() {
         
         $("#currentDay").html(calendarDate);
         console.log(currentHour);
         var myTimer = setInterval(function () {
-            newHour = moment().format("HH");
+            newTime = moment().format("HHDD")
+            newHour = newTime.slice(0,2);
+            newDay = newTime.slice(2,4);
+            console.log(newHour);
+            console.log(newDay);
             if (currentHour !== newHour) {
                 currentHour = newHour;
                 console.log(currentHour);
                 checkHours();
             };
+            if (currentDay !== newDay)
+            {
+                createCalendar();
+            }
         }, 1000);
+    }
+
+    function newDay() 
+    {
+
     }
 
     function createCalendar() {
@@ -31,10 +47,12 @@ $(document).ready(function () {
             var calHour = $("<p>").text(value).addClass("hour").attr("id", "t" + (i + 9).toString());
             var myHr = indexHour(i);
             var myId = "#" + myHr;
-            if (parseInt(currentHour) >= 18 && parseInt(currentHour) <= 24) {
+            if (parseInt(currentHour) >= 18 && parseInt(currentHour) <= 24) 
+            {
                 var calInput = $("<textarea rows='3'>").addClass("past time-block").attr("id", myHr);
             }
-            else {
+            else  
+            {
                 var calInput = $("<textarea rows='3'>").addClass("future time-block data").attr("id", myHr);
             }
             var calBtn = $("<button>").html("<i class=\"far fa-share-square\"></i>").addClass("saveBtn");
