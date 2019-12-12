@@ -95,6 +95,7 @@ $(document).ready(function () {
         function checkHours()
         {       
             if (parseInt(currentHour) >= 18 && parseInt(currentHour) <= 24) {
+                console.log(currentHour + "C H");
                 $("textarea").removeClass("future present");
                 $("textarea").addClass("past");
             }
