@@ -94,14 +94,15 @@ $(document).ready(function () {
         
         function checkHours()
         {       
-            if (parseInt(currentHour) >= 18 && parseInt(currentHour) <= 24) 
-            {
-                $("textarea").addClass( "past" );
+            if (parseInt(currentHour) >= 18 && parseInt(currentHour) <= 24) {
+                $("textarea").removeClass("future present");
+                $("textarea").addClass("past");
             }
-            else if (parseInt(currentHour) >= 0 && parseInt(currentHour) <= 8)
-            {
+            else if (parseInt(currentHour) >= 0 && parseInt(currentHour) <= 8) {
+                $("textarea").removeClass("past present");
                 $("textarea").addClass("future");
             }
+            else {
 
                 console.log(currentHour);
                 var myId = document.getElementById(currentHour);
@@ -113,6 +114,7 @@ $(document).ready(function () {
                 $(myId).nextAll("textarea").removeClass("past present");
                 $(myId).prevAll("textarea").addClass("past");
                 $(myId).prevAll("textarea").removeClass("present future");
+            }
         }
     
     startTimer();
