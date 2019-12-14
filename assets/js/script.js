@@ -3,9 +3,8 @@ $(document).ready(function () {
     var currentHour = moment().format("HH");
     var today = moment().format("MMDDYY");
     var currentDay = today.slice(2,4);
-    console.log(currentDay);
     var newHour = currentHour;
-    var calendarDate = moment().format("dddd, MMMM Do, YYYY");    
+    var calendarDate = moment().format("dddd, MMMM Do, YYYY"); 
     var myHour = ["9am", "10am", "11am", "Noon", "1pm", "2pm", "3pm", "4pm", "5pm"];
 
     function indexHour(x) {
@@ -13,6 +12,14 @@ $(document).ready(function () {
         return indexHour[x];
     }
 
+    function getCurrentDay()
+    {
+        today = moment().format("MMDDYY");
+        currentDay = today.slice(2,4);
+        calendarDate = moment().format("dddd, MMMM Do, YYYY"); 
+        $("#currentDay").html(calendarDate);
+        checkHours();
+    }
     function startTimer() {
         
         $("#currentDay").html(calendarDate);
@@ -26,18 +33,9 @@ $(document).ready(function () {
             if (currentHour !== newHour) {
                 currentHour = newHour;
                 console.log(currentHour);
-                checkHours();
+                getCurrentDay();
             };
-            if (currentDay !== newDay)
-            {
-                createCalendar();
-            }
         }, 1000);
-    }
-
-    function newDay() 
-    {
-
     }
 
     function createCalendar() {
@@ -95,7 +93,16 @@ $(document).ready(function () {
     }
         
         function checkHours()
-        {
+        {       
+            if (parseInt(currentHour) >= 18 && parseInt(currentHour) <= 24) 
+            {
+                $("textarea").addClass( "past" );
+            }
+            else if (parseInt(currentHour) >= 0 && parseInt(currentHour) <= 8)
+            {
+                $("textarea").addClass("future");
+            }
+
                 console.log(currentHour);
                 var myId = document.getElementById(currentHour);
                 console.log(myId);
@@ -107,6 +114,7 @@ $(document).ready(function () {
                 $(myId).prevAll("textarea").addClass("past");
                 $(myId).prevAll("textarea").removeClass("present future");
         }
+    
     startTimer();
     createCalendar();
     getData();
