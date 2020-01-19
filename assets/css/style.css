@@ -7,6 +7,10 @@ body {
 .container {
   max-width: 960px;
 }
+.mycontainer {
+  padding-right: 10px;
+  padding-left: 10px;
+}
 textarea{
   background: transparent;
   resize: none;
@@ -92,22 +96,30 @@ textarea{
   padding-left: .6em ;
 
 }
-@media only screen and (max-width: 700px)
+@media only screen and (max-width: 760px)
 {
-  .container {
-    max-width: 500px;
-  }
   .saveBtn{
-    width: 14%;
-    padding-right: 1em;
-    padding-left: .8em;
-  }
-  .hour {
-    width: 14%;
+    width: 10%;
     padding-right: .8em;
     padding-left: .8em;
   }
+  .hour {
+    width: 10%;
+    padding-right: 1.2em;
+    padding-left: .6em;
+  }
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .mytext {
+    margin-left: 0px;
+    padding-left: 0px;
+    word-wrap: normal;
+    text-align: center;
+    padding: 2rem;
+  }
   .time-block {
-    width: 70%;
+    width: 75%;
   }
 }

@@ -23,14 +23,19 @@
   </head>
 
   <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+    <header class="jumbotron jumbotron-fluid">
+      <h2>Work Day Scheduler</h2>
+      <p>A simple calendar app for scheduling your work day</p>
+      <p id="currentDay"></p>
     </header>
-    <div class="container" id = "timeBlock">
+    <div class="container">
+      <div class="row justify-content-center">
+      <div class="col-lg-12">
+      <div id="timeBlock"></div>
       <!-- Timeblocks go here -->
     </div>
+  </div>
+  </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="https://unpkg.com/moment" />
